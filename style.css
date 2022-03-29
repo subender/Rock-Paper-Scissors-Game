@@ -1,3 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+
+:root {
+  --messages-color: #0582ca;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: rebeccapurple;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.8rem;
+  height: 100vh;
+  width: 100vw;
+  color: #495057;
+  background-color: #000052;
+  /* opacity: 0.92; */
+  background: repeating-linear-gradient(
+    45deg,
+    #151967,
+    #151967 5px,
+    #000052 5px,
+    #000052 25px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  min-width: 70%;
+  height: 90%;
+  background-color: #e0e0e0;
+  opacity: 1;
+  padding: 2rem 5rem 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.heading {
+  color: var(--messages-color);
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 70%;
+  height: 20%;
+  background-color: #f8f9fa;
+  border: 5px solid #fca311;
+  position: relative;
+}
+
+.score-board .user,
+.score-board .computer {
+  padding: 1rem 1.6rem;
+  background-color: #0353a4;
+  position: absolute;
+  color: #f8f9fa;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.score-board .user {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-50%);
+}
+.score-board .scores {
+  color: #27187e;
+  font-size: 4rem;
+}
+.score-board .computer {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) translateX(50%);
+}
+
+.message {
+  color: var(--messages-color);
+  /* font-size: rem; */
+}
+
+.buttons__container {
+  width: 40rem;
+  height: 12rem;
+}
+
+.buttons__container .btn {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 17px 17px 33px #bebebe, -17px -17px 33px #ffffff;
+  padding: 1rem;
+  border: none;
+  font-size: 4rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.buttons__container .btn:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.buttons__container .btn:hover {
+  outline: none;
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow: inset 17px 17px 33px #bebebe, inset -17px -17px 33px #ffffff;
+}
+
+.make__move {
+  color: var(--messages-color);
+  font-weight: 700;
+  font-size: 2.4rem;
 }
